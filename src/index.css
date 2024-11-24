@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    @apply antialiased text-gray-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500;
+  }
+}
+
+/* Mapbox custom styles */
+.mapboxgl-popup {
+  @apply max-w-xs;
+}
+
+.mapboxgl-popup-content {
+  @apply p-3 rounded-lg shadow-lg;
+}
+
+.mapboxgl-popup-close-button {
+  @apply text-gray-500 hover:text-gray-700 focus:outline-none;
+}
+
+.marker-pickup, .marker-dropoff {
+  @apply cursor-pointer transition-transform hover:scale-110;
+}
